@@ -183,38 +183,3 @@ A friend class gives **all** of its member functions access.
 3. Can they be virtual? → **No**
 4. Can they access private members? → **Yes**
 5. Are they member functions? → **No**
-
----
-
-# Can You Run C++ Code in a Markdown (.md) File?
-
-**No.**
-
-Markdown is a **documentation format**, not an executable program.
-
-A fenced code block like:
-
-```cpp
-int main(){}
-```
-
-is only displayed with syntax highlighting.
-
-### To run the code:
-
-1. Copy it into a `.cpp` file.
-2. Compile with:
-
-```bash
-g++ main.cpp -o main
-```
-
-3. Run:
-
-```bash
-./main
-```
-
-Or use an online compiler such as Compiler Explorer, OnlineGDB, or Programiz.
-
-> VS Code can preview Markdown and let you copy code blocks, but it does not execute C++ directly from the `.md` file.
