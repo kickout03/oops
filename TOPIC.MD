@@ -1,7 +1,3 @@
-# oops
-
-suarabh shukla opps notes
-
 
 ## Topics would include:
 
