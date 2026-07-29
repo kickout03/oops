@@ -1,61 +1,59 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <cmath>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <stack>
-#include <bitset>
-#include <queue>
-#include <unordered_set>
-#define ll long long
-#define vll vector<long long>
-#define pll pair<ll, ll>
-#define omp map<ll, ll>
-#define ump unordered_map<ll, ll>
-#define rep(i, a, b) for (ll i = a; i < b; i++)
-#define rep0(i, n) for (ll i = 0; i < n; i++)
-#define print(arr) \
-    for (int i = 0; i < arr.size(); i++) \
-        cout << arr[i] << ' ';
-#define input(arr, n) \
-    for (int i = 0; i < n; i++) \
-        cin >> arr[i];
 using namespace std;
 
-
-
-
+// Forward declaration
 class B;
-class A{
+
+class A
+{
+private:
     int a;
-    public:
-     A(int x){ a=x;}
-    friend int operator+(A,B);
 
+public:
+    A(int x)
+    {
+        a = x;
+    }
+
+    // Friend function declaration
+    friend void showSum(A, B);
 };
-class B{
+
+class B
+{
+private:
     int b;
-    public:
-    B(int x){ b=x;}
-    friend int operator+(A,B);
+
+public:
+    B(int y)
+    {
+        b = y;
+    }
+
+    // Friend function declaration
+    friend void showSum(A, B);
 };
 
-int operator+(A x,B y){
-    cout<<"sum "<<x.a + y.b<<endl;
-    return x.a+y.b;
+// Friend function definition
+void showSum(A x, B y)
+{
+    // Can access private data
+    cout << "A = " << x.a << endl;
+    cout << "B = " << y.b << endl;
+
+    cout << "Sum = " << x.a + y.b << endl;
 }
+/*
+A friend function is NOT a member of the class, but it is allowed to access the private and protected members of the class.
 
-
+*/
 int main()
 {
+    A obj1(10);
+    B obj2(20);
 
-    A a(50);
-    B b(5);
+    showSum(obj1, obj2);
 
-    int x = a+b;
-    cout<< x;
     return 0;
 }
+

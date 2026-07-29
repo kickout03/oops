@@ -58,6 +58,18 @@ private:
         temp.b=b+c.b;
         return temp;
     }
+    complex operator-(complex c){// when you call it called prints as vale of c1 copes;
+        complex temp(0,0);
+        temp.a=a-c.a;
+        temp.b=b-c.b;
+        return temp;
+    }
+    complex operator-(){// when you call it called prints as vale of c1 copes;
+        complex temp(0,0);
+        temp.a=-a;
+        temp.b=-b;
+        return temp;
+    }
 
     
 };
@@ -70,6 +82,11 @@ int main()
     c1.showData();
     c2.showData();
     complex c3 = c1+c2;// operator overloading;
+    complex c4 = c1-c2;// operator overloading;
+    complex c5 = -c1;// operator overloading;
+    c3.showData();  
+    c4.showData();
+    c5.showData();
     cout<<"programs end"<<endl;
 
     return 0;

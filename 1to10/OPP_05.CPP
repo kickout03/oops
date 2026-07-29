@@ -28,8 +28,8 @@ using namespace std;
 class A{
     private:
     int a;
-    static int g;
     public:
+    static int g;
     int x;
 
     A(int a,int x){
@@ -105,9 +105,11 @@ int main()
     cout<<endl;
   
 
+    cout<<"we can access static public member without object: g = "<<A::g<<endl;
     A a(2,3);
     cout<<a.x<<endl;
     // cout<<a.a<<endl;// private
+    // cout<<a.g<<endl;// static public
     a.showall();
 
     return 0;
