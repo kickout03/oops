@@ -314,7 +314,7 @@ Example
 
 Output
 
-```
+```Shell
 B Destructor
 
 A Destructor
